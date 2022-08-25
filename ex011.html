@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const f = document.createElement("form");
+
+        const i = document.createElement("input");
+        i.setAttribute('type', "text");
+        i.setAttribute('id', "1stNum");
+        a = document.getElementsByName("username").values;
+        console.log(a);
+        const i2 = document.createElement("input");
+        i2.setAttribute('type', "text");
+        i2.setAttribute('name', "username");
+
+        const s = document.createElement("input");
+        s.setAttribute('type', "submit");
+        s.setAttribute('value', "Submit");
+        s.setAttribute('id', "submit");
+
+        document.querySelector('#submit').addEventListener('click', function() {
+            num1 = document.getElementById("1stNum").value;
+            num2 = document.getElementById("2ndNum").value;
+            document.getElementById("result").innerHTML = num1 + num2;
+        });
+
+        f.appendChild(i2);
+        f.appendChild(i);
+        f.appendChild(s);
+
+        document.body.appendChild(f);
+    </script>
+</body>
+
+</html>

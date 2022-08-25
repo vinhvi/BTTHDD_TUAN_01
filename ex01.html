@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        first number: <input type="text" id="1stNum" /> <br> second number: <input type="text" id="2ndNum" /> <br>
+        <input type="button" onclick="addN()" value="Add" />
+    </form>
+    <p>
+        Result: <span id="result"></span>
+    </p>
+    <script>
+        function addN() {
+            num1 = Number(document.getElementById("1stNum").value);
+            num2 = Number(document.getElementById("2ndNum").value);
+            var tong = num1 + num2;
+            document.getElementById("result").innerHTML = tong;
+        }
+    </script>
+</body>
+
+</html>
